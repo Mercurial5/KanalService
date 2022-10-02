@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body style="background-color: #ffb3e8">
+<div class="container">
+    <h1 class="mt-5">Table of orders.</h1>
+    <div class="row">
+        <table class="table table-hover mt-5" style="background-color: white">
+            <thead>
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">USD cost</th>
+                <th class="text-center">RUB cost</th>
+                <th class="text-center">Delivery date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for order in orders %}
+            <tr>
+                <th class="text-center">{{ order.id }}</th>
+                <td class="text-center">{{ order.cost_usd }} $</td>
+                <td class="text-center">{{ order.cost_rub }} ₽</td>
+                <td class="text-center">{{ order.date }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
