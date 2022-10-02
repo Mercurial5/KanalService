@@ -1,3 +1,10 @@
+"""
+This script is intended to show data from DB in a simple web page.
+
+May be used with nohup.
+"""
+
+
 from flask import Flask, render_template
 from sqlalchemy.orm import Session
 from dotenv import load_dotenv
